@@ -1,0 +1,15 @@
+Name: interface.ntproxy
+ListenOn: 127.0.0.1:20130
+Etcd:
+  Hosts:
+    - 127.0.0.1:2379
+  Key: interface.ntproxy
+Server:
+  Addrs:
+    - 0.0.0.0:11443
+  SendBuf: 65536
+  ReceiveBuf: 65536
+  Multicore: false
+Client:
+  Addrs:
+    - 127.0.0.1:10443
